@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skul Cart: Add Product</title>
+
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="stylesheet" href="../css/addProduct.css" />
+  </head>
+  <body>
+    <img src="../img/edited-loader.gif" class="loader" alt="" />
+
+    <div class="alert-box">
+      <img src="../img/orange-error-removebg.png" class="alert-image" alt="" />
+      <p class="alert-msg"></p>
+    </div>
+
+    <a href="/"
+      ><img src="../img/skul-cart-logo-removebg.png" class="logo" alt=""
+    /></a>
+
+    <div class="form">
+      <input type="text" id="product-name" placeholder="Product Name" />
+      <input
+        type="text"
+        id="short-description"
+        placeholder="Short line about the product"
+      />
+      <textarea
+        id="detailed-description"
+        placeholder="Detailed Description"
+      ></textarea>
+
+      <!-- product image -->
+      <div class="product-info">
+        <div class="product-image"><p class="text">Product Image</p></div>
+        <div class="upload-image-section">
+          <!-- upload inputs -->
+          <p class="text">
+            <img src="../img/camera-removebg.png" alt="" />Upload Image
+          </p>
+          <div class="upload-catalogue">
+            <input
+              type="file"
+              class="file-upload"
+              id="first-file-upload-btn"
+              hidden
+            />
+            <label for="first-file-upload-btn" class="upload-image"></label>
+            <input
+              type="file"
+              class="file-upload"
+              id="second-file-upload-btn"
+              hidden
+            />
+            <label for="second-file-upload-btn" class="upload-image"></label>
+            <input
+              type="file"
+              class="file-upload"
+              id="third-file-upload-btn"
+              hidden
+            />
+            <label for="third-file-upload-btn" class="upload-image"></label>
+            <input
+              type="file"
+              class="file-upload"
+              id="fourth-file-upload-btn"
+              hidden
+            />
+            <label for="fourth-file-upload-btn" class="upload-image"></label>
+          </div>
+        </div>
+        <!-- <div class="select-types">
+          <p class="text">Types Available</p>
+          <div class="types">
+            <input type="checkbox" class="type-checkbox" id="one" value="One" />
+            <input type="checkbox" class="type-checkbox" id="two" value="Two" />
+            <input
+              type="checkbox"
+              class="type-checkbox"
+              id="three"
+              value="Three"
+            />
+            <input
+              type="checkbox"
+              class="type-checkbox"
+              id="four"
+              value="Four"
+            />
+          </div>
+        </div> -->
+      </div>
+
+      <div class="product-price">
+        <input type="number" id="actual-price" placeholder="Actual Price" />
+        <input type="number" id="discount" placeholder="Discount Percentage" />
+        <input type="number" id="sell-price" placeholder="Selling Price" />
+      </div>
+
+      <input
+        type="number"
+        id="stock"
+        min="20"
+        placeholder="Items in Stock (Minimum 20)"
+      />
+      <textarea
+        id="tags"
+        placeholder="Enter tags here for quick search. Separate each key word/phrase with a comma (,), do not put a space after the comma. For example: Anti-theft,backpack,targus...etc. Also include predefined system tags. For example: special-offer,extras..."
+      ></textarea>
+
+      <input type="checkbox" class="checkbox" id="tac" checked />
+      <label for="tac">Skul-Cart takes 30% from your total sales...</label>
+
+      <div class="buttons">
+        <button class="btn" id="add-btn">Add Product</button>
+        <button class="btn" id="save-btn">Save Draft</button>
+      </div>
+    </div>
+
+    <script src="../js/token.js"></script>
+    <script src="../js/addProduct.js"></script>
+  </body>
+</html>

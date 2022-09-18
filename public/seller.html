@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Dashboard</title>
+
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <link rel="stylesheet" href="css/seller.css" />
+  </head>
+  <body>
+    <img src="img/edited-loader.gif" class="loader" alt="" />
+
+    <div class="alert-box">
+      <img src="img/orange-error-removebg.png" class="alert-image" alt="" />
+      <p class="alert-msg">Error Message</p>
+    </div>
+
+    <a href="/"
+      ><img src="img/skul-cart-logo-removebg.png" class="logo" alt=""
+    /></a>
+
+    <!-- solusi sellers element -->
+
+    <div class="become-seller">
+      <p class="heading">Apply for Seller Account</p>
+      <p class="description">
+        This page is for the registration of a seller account.
+      </p>
+      <button class="btn" id="apply-btn">Apply for Seller Account</button>
+    </div>
+
+    <!-- apply form -->
+    <div class="apply-form hide">
+      <input
+        type="text"
+        id="business-name"
+        placeholder="Business Name / Company Name / Shop Name"
+      />
+      <textarea id="business-address" placeholder="Address"></textarea>
+      <textarea id="about" placeholder="About"></textarea>
+      <input type="text" id="number" placeholder="Mobile Number" />
+      <input
+        type="checkbox"
+        checked
+        class="checkbox"
+        id="terms-and-conditions"
+      />
+      <label for="terms-and-conditions"
+        >Agree to our <a href="">Terms and Conditions</a></label
+      >
+      <br />
+      <input type="checkbox" checked class="checkbox" id="legitInfo" />
+      <label for="notifications">All information is Legitimate</label>
+      <button class="submit-btn" id="apply-form-btn">Apply</button>
+    </div>
+
+    <!-- products list -->
+    <div class="product-listing hide">
+      <div class="add-product">
+        <p class="add-product-title">Add Product</p>
+        <button class="btn" onclick="location.href = '/add-product'">
+          Add Product
+        </button>
+      </div>
+      <img
+        src="img/no-product-image.png"
+        class="no-product-image hide"
+        alt=""
+      />
+
+      <!-- delete alert -->
+      <div class="delete-alert">
+        <div class="alert">
+          <button class="close-btn">
+            <img src="img/close-removebg.png" alt="" />
+          </button>
+          <img
+            src="img/delete-warning-removebg.png"
+            class="delete-svg"
+            alt=""
+          />
+          <p class="text">Are you sure you want to delete this product?</p>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <!-- cards -->
+      <div class="product-container">
+        <!-- <div class="product-card">
+          <div class="product-image">
+            <span class="tag">Draft</span>
+            <img src="img/office-pillow.jpg" class="product-thumb" alt="" />
+            <button class="card-action-btn edit-btn">
+              <img src="img/edit-removebg.png" alt="" />
+            </button>
+            <button class="card-action-btn open-btn">
+              <img src="img/open-removebg.png" alt="" />
+            </button>
+            <button class="card-action-btn delete-popup-btn">
+              <img src="img/delete.png" alt="" />
+            </button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">everlasting</h2>
+            <p class="product-short-description">
+              Lumbar support office pillow...
+            </p>
+            <span class="price">$30</span><span class="actual-price">$40</span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="js/token.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/seller.js"></script>
+  </body>
+</html>

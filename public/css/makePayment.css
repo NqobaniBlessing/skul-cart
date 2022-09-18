@@ -1,0 +1,242 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body {
+  display: block;
+  padding: 0 10vw;
+}
+
+.container {
+  min-height: 100vh;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
+}
+
+.container form {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 600px;
+  padding-top: 160px;
+}
+
+.container form .inputBox {
+  margin-top: 20px;
+}
+
+.container form .inputBox span {
+  display: block;
+  color: #9999;
+  padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #df7206;
+  color: #444;
+}
+
+.container form .flexbox {
+  display: flex;
+  gap: 15px;
+}
+
+.container form .flexbox .inputBox {
+  flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #d09459, #df7206);
+  margin-top: 20px;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.container form .submit-btn:hover {
+  background: linear-gradient(45deg, rgb(178, 44, 44), rgb(146, 1, 1));
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.container .card-container {
+  margin-bottom: -150px;
+  position: relative;
+  height: 250px;
+  width: 400px;
+}
+
+.container .card-container .front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #d09459, #df7206);
+  border-radius: 5px;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.4s ease-out;
+}
+
+.container .card-container .front .image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.container .card-container .front .image img {
+  height: 50px;
+}
+
+.container .card-container .front .card-number-box {
+  padding: 30px 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.container .card-container .front .flexbox {
+  display: flex;
+}
+
+.container .card-container .front .box:nth-child(1) {
+  margin-right: auto;
+}
+
+.container .card-container .front .box {
+  font-size: 15px;
+  color: #fff;
+}
+
+.container .card-container .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #d09459, #df7206);
+  border-radius: 5px;
+  padding: 20px 0;
+  text-align: right;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+
+.container .card-container .back .stripe {
+  background: #000;
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+}
+
+.container .card-container .back .box {
+  padding: 0 20px;
+}
+
+.container .card-container .back .box span {
+  color: #fff;
+  font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box {
+  height: 30px;
+  padding: 10px;
+  margin-top: 5px;
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.container .card-container .back .box img {
+  margin-top: 30px;
+  height: 30px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.container form .inputBox input .cvv-input {
+  margin: 0;
+}
+
+.inputBox .cvv-input {
+  margin: 0;
+}
+
+.radio {
+  display: inline-flex;
+  text-align: center;
+  margin-right: 10px;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#group {
+  display: flex;
+}
+
+#Ecocash {
+  margin-left: 10px;
+}
+
+.radio_input {
+  display: inline-flex;
+  text-align: center;
+  margin-right: 10px;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.radio_radio {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #d09459;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.radio_radio::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #df7206;
+  border-radius: 50%;
+}
+
+.radio.check {
+  background: #df7206;
+  color: #fff;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skul-Cart: Checkout</title>
+
+    <link rel="stylesheet" href="css/signup.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <nav class="navbar"></nav>
+
+    <img src="img/edited-loader.gif" class="loader" alt="" />
+
+    <div class="alert-box">
+      <img src="img/orange-error-removebg.png" class="alert-image" alt="" />
+      <p class="alert-msg"></p>
+    </div>
+
+    <div class="form">
+      <h1 class="heading">Checkout</h1>
+      <p class="text">Delivery Address</p>
+      <input type="text" id="address" placeholder="Address" />
+      <input type="text" id="street" placeholder="Street" />
+      <div class="three-input-container">
+        <input type="text" id="city" placeholder="City" />
+        <input type="text" id="province" placeholder="Province" />
+        <input type="text" id="area-code" placeholder="Area Code" />
+      </div>
+      <input type="text" id="landmark" placeholder="Landmark" />
+    </div>
+
+    <div class="cart-section">
+      <div class="product-list">
+        <p class="section-heading">Your Cart</p>
+        <div class="cart"></div>
+      </div>
+      <div class="checkout-section">
+        <div class="checkout-box">
+          <p class="text">Your total bill,</p>
+          <h1 class="bill">$00</h1>
+          <button class="make-payment-btn">Place Order</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/token.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
