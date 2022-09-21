@@ -19,10 +19,12 @@
     <div class="container">
       <aside>
         <div class="top">
-          <div class="logo">
-            <img src="img/skul-cart-logo.png" />
-            <h2>Skul-Cart</h2>
-          </div>
+          <a href="/"
+            ><div class="logo">
+              <img src="img/skul-cart-logo.png" />
+              <h2>Skul-Cart</h2>
+            </div></a
+          >
           <div class="close" id="close-btn">
             <span class="material-icons-sharp">close</span>
           </div>
@@ -32,24 +34,24 @@
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
           </a>
-          <a href="#" class="active">
+          <a href="#" class="active open">
             <span class="material-icons-sharp">person</span>
             <h3>Customers</h3>
           </a>
-          <a href="#">
+          <a href="#" class="open">
             <span class="material-icons-sharp">receipt_long</span>
             <h3>Orders</h3>
           </a>
-          <a href="#">
+          <a href="#" class="open">
             <span class="material-icons-sharp">insights</span>
             <h3>Analytics</h3>
           </a>
-          <a href="#">
+          <a href="#" class="open">
             <span class="material-icons-sharp">mail_outline</span>
             <h3>Messages</h3>
             <span class="message-count">26</span>
           </a>
-          <a href="#">
+          <a href="#" class="open">
             <span class="material-icons-sharp">inventory</span>
             <h3>Products</h3>
           </a>
@@ -61,7 +63,7 @@
             <span class="material-icons-sharp">settings</span>
             <h3>Settings</h3>
           </a>
-          <a href="#">
+          <a href="/add-product">
             <span class="material-icons-sharp">add</span>
             <h3>Add Product</h3>
           </a>
@@ -74,9 +76,9 @@
 
       <!-- MAIN SECTION -->
       <main>
-        <h1>Dashboard</h1>
+        <h1>E-Commerce Dashboard</h1>
         <div class="date">
-          <input type="date" />
+          <p id="date"></p>
         </div>
         <div class="insights">
           <div class="sales">
@@ -152,41 +154,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>84736</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>84736</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>84736</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>84736</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>84736</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-              </tr>
+              <!-- Orders will populate here -->
             </tbody>
           </table>
           <a href="#">Show All</a>
@@ -293,6 +261,25 @@
               <span class="material-icons-sharp">add</span>
               <h3>Add Product</h3>
             </div>
+          </div>
+        </div>
+        <!-- END OF ANALYTICS -->
+        <!-- MODAL WINDOW -->
+        <div class="modal-container" id="modal-container">
+          <div class="modal">
+            <h1>Modal Window</h1>
+            <br />
+            <ul class="modal-body">
+              <!-- <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+                amet possimus, ducimus quia consequatur praesentium omnis
+                temporibus? Optio officia quasi praesentium vitae, aliquid,
+                obcaecati saepe corrupti voluptatibus debitis dolore illo?
+              </p> -->
+            </ul>
+
+            <br />
+            <button id="close">Close</button>
           </div>
         </div>
       </div>
