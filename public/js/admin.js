@@ -5,41 +5,6 @@ const modalContainer = document.querySelector('.modal-container');
 const modal = document.querySelector('.modal');
 const date = new Date();
 
-console.log(openBtn);
-
-openBtn.forEach(btn => {
-  if (btn.innerHTML.includes('Orders')) {
-    modal.innerHTML = `
-    <h1>Orders</h1>`;
-
-    //Orders array
-    let orders = [];
-
-    //Fetch orders from the backend
-    const getOrders = fetch('/get-orders')
-      .then(res => res.json())
-      .then(data => {
-        for (let i = 0; i < 20; i++) {
-          orders.push(data[i].order[0].name);
-        }
-
-        //Fill orders in modal
-        orders.forEach((order, i) => {
-          const ul = document.createElement('ul');
-          const ulContent = `
-                  <li>${order}</li>
-                  `;
-          ul.append(ulContent);
-          //document.querySelector('.modal-body').appendChild(ul);
-        });
-      })
-      .catch(err => console.log(err));
-  }
-  btn.addEventListener('click', () => {
-    modalContainer.classList.add('show');
-  });
-});
-
 closeBtn.addEventListener('click', () => {
   modalContainer.classList.remove('show');
 });
@@ -54,21 +19,25 @@ themeToggler.addEventListener('click', () => {
   themeToggler.querySelector('span').classList.toggle('active');
 });
 
-//Orders array
+//Orders arrays
 let orders = [];
+let orderData = [];
 let paymentStatus = ['Due', 'Settled', 'Partial'];
 let shippingStatus = ['Pending', 'Declined', 'Returned', 'Delivered'];
 
 //Fetch orders from the backend
-const viewOrders = fetch('/get-orders')
+fetch('/get-orders')
   .then(res => res.json())
   .then(data => {
+    for (let i = 0; i < data.length; i++) {
+      orderData.push(data[i]);
+    }
     for (let i = 0; i < 8; i++) {
       orders.push(data[i].order[0].name);
     }
 
     //Fill orders in table
-    orders.forEach((order, i) => {
+    orders.forEach(order => {
       const tr = document.createElement('tr');
       const trContent = `
                   <td>${order}</td>
@@ -89,3 +58,77 @@ const viewOrders = fetch('/get-orders')
     });
   })
   .catch(err => console.log(err));
+
+console.log(orderData);
+
+const ul = document.createElement('ul');
+let newOrders = [];
+
+const clearModal = () => {
+  newOrders = [];
+  ul.innerHTML = '';
+};
+
+openBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    switch (btn.childNodes[3].textContent) {
+      case 'Customers':
+        clearModal();
+        modal.childNodes[1].textContent = 'Customers';
+
+        for (let i = 0; i < orderData.length; i++) {
+          newOrders.push(orderData[i].name);
+        }
+
+        customers = new Set(newOrders);
+        customers.forEach(customer => {
+          let li = document.createElement('li');
+          li.textContent = customer;
+          ul.appendChild(li);
+        });
+
+        break;
+      case 'Orders':
+        clearModal();
+        modal.childNodes[1].textContent = 'Orders';
+
+        for (let i = 0; i < 20; i++) {
+          newOrders.push(orderData[i].order[0].name);
+        }
+
+        newOrders.forEach(order => {
+          let li = document.createElement('li');
+          li.textContent = order;
+          ul.appendChild(li);
+        });
+
+        break;
+      case 'Analytics':
+        clearModal();
+        modal.childNodes[1].textContent = 'Analytics';
+        break;
+      case 'Messages':
+        clearModal();
+        modal.childNodes[1].textContent = 'Messages';
+        break;
+      case 'Products':
+        clearModal();
+        modal.childNodes[1].textContent = 'Products';
+
+        for (let i = 0; i < orderData.length; i++) {
+          newOrders.push(orderData[i].order[0].name);
+        }
+
+        let products = new Set(newOrders);
+        products.forEach(product => {
+          let li = document.createElement('li');
+          li.textContent = product;
+          ul.appendChild(li);
+        });
+
+        break;
+    }
+    document.querySelector('.modal-body').appendChild(ul);
+    modalContainer.classList.add('show');
+  });
+});
