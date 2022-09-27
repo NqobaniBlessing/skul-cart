@@ -585,3 +585,16 @@ button {
   background-color: var(--color-primary);
   padding: 10px 25px;
 }
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  display: none;
+  border: 2px solid #df7206;
+  border-radius: 20px;
+  padding-bottom: 25px;
+  background: #fff;
+}
