@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skul-Cart: Create Account</title>
+
+    <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <img src="img/edited-loader.gif" class="loader" alt="" />
+    <div class="alert-box">
+      <img src="img/orange-error-removebg.png" class="alert-image" alt="" />
+      <p class="alert-msg">Error Message</p>
+    </div>
+
+    <div class="container">
+      <a href="/"
+        ><img src="img/skul-cart-logo-removebg.png" class="logo" alt=""
+      /></a>
+      <div>
+        <input type="text" autocomplete="off" id="name" placeholder="Name" />
+        <input
+          type="text"
+          autocomplete="off"
+          id="number"
+          placeholder="Mobile Number"
+        />
+        <input
+          type="email"
+          autocomplete="off"
+          id="email"
+          placeholder="E-mail"
+        />
+        <input
+          type="password"
+          autocomplete="off"
+          id="password"
+          placeholder="Password"
+        />
+        <input
+          type="checkbox"
+          checked
+          class="checkbox"
+          id="terms-and-conditions"
+        />
+        <label for="terms-and-conditions"
+          >Agree to our <a href="">Terms and Conditions</a></label
+        >
+        <br />
+        <input type="checkbox" class="checkbox" id="notifications" />
+        <label for="notifications">Receive upcoming offers and events</label>
+        <button class="submit-btn">Create Account</button>
+      </div>
+      <a href="/login" class="link">Already have an account? Log in here</a>
+    </div>
+    <script src="js/token.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
